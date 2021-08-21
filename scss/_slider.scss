@@ -1,0 +1,80 @@
+/*********************************************/
+/*                 SLIDER                    "/
+/*********************************************/
+@import "./variables";
+
+.swiper-container {
+  width: 100%;
+  height: 700px;
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-filter: brightness(30%);
+    filter: brightness(30%);
+  }
+
+  .slide-text {
+    position: absolute;
+
+    h2 {
+      color: $bodyColor;
+      font-size: 60px;
+      margin: 0px;
+      background: linear-gradient(to right, #de1028 0%, #ff4b60 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      color: $bodyColor;
+      font-size: 17px;
+      letter-spacing: 2px;
+      line-height: 32px;
+    }
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-slider {
+      font-size: 18px;
+      letter-spacing: 1px;
+      margin-top: 15px;
+      border: 2px solid $primaryColor;
+      padding: 10px 15px;
+
+      &:hover {
+        color: $bodyColor;
+        background: #ed213a;
+        background: -webkit-linear-gradient(to right, #93291e, #ed213a);
+        background: linear-gradient(to right, #93291e, #ed213a);
+        -webkit-transition: all 0.5s 0s ease;
+        -moz-transition: all 0.5s 0s ease;
+        -o-transition: all 0.5s 0s ease;
+        transition: all 0.5s 0s ease;
+      }
+    }
+  }
+}

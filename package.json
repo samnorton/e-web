@@ -1,0 +1,7 @@
+{
+  "name": "e-web",
+  "version": "1.0.0",
+  "dependencies": {
+    "swiper": "^6.8.2"
+  }
+}

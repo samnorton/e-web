@@ -1,0 +1,144 @@
+/*********************************************/
+/*              NAVIGATION                   "/
+/*********************************************/
+
+@import "./variables";
+
+header {
+  background-color: $hfColor;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  color: $bodyColor;
+  max-width: 1130px;
+  margin: 0px auto;
+  padding: 16px 0px 12px;
+
+  .navbar__logo {
+    background-image: url("../images/logo.png");
+    width: 100px;
+    height: 43px;
+    margin-bottom: 10px;
+  }
+
+  .navbar__navbar-links {
+    height: 100%;
+  }
+
+  .navbar__navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar__navbar-links li {
+    list-style: none;
+  }
+
+  .navbar__navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: $bodyColor;
+    padding: 1rem;
+    font-weight: 500;
+
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+}
+
+.navbar__toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.navbar__toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: $bodyColor;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .navbar__navbar-links {
+      display: none;
+      width: 100%;
+    }
+
+    .navbar__navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .navbar__navbar-links ul li {
+      text-align: left;
+
+      &:hover {
+        background-color: $secondaryColor;
+      }
+    }
+
+    .navbar__navbar-links ul li a,
+    .navbar__logo {
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        color: $bodyColor;
+      }
+    }
+
+    .navbar__navbar-links.active {
+      display: flex;
+    }
+  }
+
+  .navbar__toggle-button {
+    display: flex;
+    margin-top: 16px;
+  }
+}
+
+#btnScrollToTop {
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: $primaryColor;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+#btnScrollToTop:hover {
+  background: $secondaryColor;
+  cursor: pointer;
+}
+
+#btnScrollToTop.active {
+  visibility: visible;
+  opacity: 1;
+}

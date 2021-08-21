@@ -1,0 +1,51 @@
+/*********************************************/
+/*              GENERAL CSS                  "/
+/*********************************************/
+
+@import "./variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  max-width: 1320px;
+  margin: 0px auto;
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  color: $bodyColor;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $primaryColor;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+section {
+  padding: 60px;
+}
+
+span {
+  font-size: 12px;
+  font-style: italic;
+}
